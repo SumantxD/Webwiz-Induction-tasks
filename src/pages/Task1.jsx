@@ -66,7 +66,7 @@ function Task1() {
 <!-- color1 #5d3a3a -->
 <!-- color2 #b5e0ba -->"
               height="200px"
-              width= "500px"
+              width= "25vw"
               theme={okaidia}
               extensions= {[html({autoCloseTags:true})]}
               onChange={onChangehtmlC}
@@ -82,7 +82,7 @@ function Task1() {
   background: #dd6b4d;
 }"
               height="200px"
-              width="500px"
+              width="25vw"
               extensions= {[css()]}
               theme={okaidia}
               onChange={onChangecssC}
@@ -94,7 +94,7 @@ function Task1() {
             <CodeMirror
               value="console.log('hello world!');"
               height="200px"
-              width="500px"
+              width="25vw"
               theme={okaidia}
               extensions={[javascript({ jsx: true })]}
               onChange={onChangejsC}
