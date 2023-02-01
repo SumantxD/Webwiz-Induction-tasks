@@ -53,7 +53,7 @@ function Task1() {
 
   return (
     <>
-    <div className=' p-10'>
+    <div className=' p-10 max-w-[100vw]'>
 
     
         <Navbar/>
