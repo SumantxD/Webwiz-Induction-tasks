@@ -5,18 +5,15 @@ import Navbar from './Navbar'
 
 const Home = () => {
   return (
-    <>  
+    <> 
+      <div className=' p-10'>
         <Navbar/>
-        <div className=' bg-slate-500'>Welcome to Webwiz</div>
-        <div>
-            <Link to='/task1'>
-                <button>Task1</button>
-            </Link>
-            <button>Task2</button>
-            <button>Task3</button>
-            <button>Task4</button>
-            <button>Task5</button>
+        <div className=' bg-slate-300 mt-5 text-center text-gray-500 text-6xl font-light font-mono'>Welcome to Webwiz</div>
+        <div className=' bg-slate-200 w-full h-[70vh] mt-1'>
+
         </div>
+      </div> 
+            
     </>
   )
 }

@@ -53,8 +53,11 @@ function Task1() {
 
   return (
     <>
+    <div className=' p-10'>
+
+    
         <Navbar/>
-      <div id='container' className=' flex flex-col'>
+      <div id='container' className=' flex flex-col mt-5'>
         <div id='left-section' className='flex bg-green-300 justify-between'>
           <div className='flex flex-col'>
             <h1 className=' bg-red-400'>HTML</h1>
@@ -122,6 +125,7 @@ function Task1() {
             <div className=' w-5 h-5 bg-[#b5e0ba] rounded-lg'></div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

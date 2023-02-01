@@ -10,21 +10,32 @@ import Navbar from './Navbar';
 function Task4() {
 
   const htmlinit = `
-  <div></div>
-  <!-- color1 #62374e -->
-  <!-- color2 #fdc57b -->
+  <div id='container'>
+  <div id='destination'></div>
+</div>
   `
   const cssinit = `
-    div {
-      width: 100px;
-      height: 100px;
-      background: #dd6b4d;
-    }
+    #container {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: purple;
+}
+#destination {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 100%;
+  background: yellow;
+}
   `
 
   const [htmlC, setHtmlC] = useState(htmlinit);
   const [cssC, setCssC] = useState(cssinit);
   const [jsC, setJsC] = useState('');
+
+  const [st, setSt] = useState(0);
 
   const srcDoc = `
     <html>
@@ -53,15 +64,16 @@ function Task4() {
 
   return (
     <>
+    <div className=' p-10'>
         <Navbar/>
-      <div id='container' className=' flex flex-col'>
+      <div id='container' className=' flex flex-col mt-5'>
         <div id='left-section' className='flex bg-green-300 justify-between'>
           <div className='flex flex-col'>
             <h1 className=' bg-red-400'>HTML</h1>
             <CodeMirror
-              value="<div></div>
-<!-- color1 #62374e -->
-<!-- color2 #fdc57b -->"
+              value="<div id='container'>
+  <div id='destination'></div>
+</div>"
               height="200px"
               width="525px"
               theme={okaidia}
@@ -73,10 +85,19 @@ function Task4() {
           <div className=' flex flex-col'>
             <h1 className=' bg-red-400'>CSS</h1>
             <CodeMirror
-              value="div {
+              value="#container {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: purple;
+}
+#destination {
   width: 100px;
   height: 100px;
-  background: #dd6b4d;
+  position: absolute;
+  border-radius: 100%;
+  background: yellow;
 }"
               height="200px"
               width="525px"
@@ -110,18 +131,34 @@ function Task4() {
             />
           </div>
           <div id='value' className=' bg-purple-500 w-1/2'>
-            <img src="task2.png" alt="task1" className=' w-full h-full'/>
+            <div className='flex overflow-x-auto gap-x-5 whitespace-nowrap'>
+                <button onClick={ () => setSt(0)} className='text-gray-700 bg-slate-300 p-3 rounded-lg font-medium'>ST1</button>
+                <button onClick={ () => setSt(1)} className='text-gray-700 bg-slate-300 p-3 rounded-lg font-medium'>ST2</button>
+                <button onClick={ () => setSt(2)} className='text-gray-700 bg-slate-300 p-3 rounded-lg font-medium'>ST3</button>
+                <button onClick={ () => setSt(3)} className='text-gray-700 bg-slate-300 p-3 rounded-lg font-medium'>ST4</button>
+                <button onClick={ () => setSt(4)} className='text-gray-700 bg-slate-300 p-3 rounded-lg font-medium'>ST5</button>
+            </div>
+
+            {(st === 0) && <img src="st1.png" alt="st1" className='p-2'/>}
+            {(st === 1) && <img src="st2.png" alt="st2" className='p-2'/>}
+            {(st === 2) && <img src="st3.png" alt="st3" className='p-2'/>}
+            {(st === 3) && <img src="st4.png" alt="st4" className='p-2'/>}
+            {(st === 4) && <img src="st5.png" alt="st5" className='p-2'/>}
+
+            
           </div>
         </div>
         <div id='hints' className=' bg-slate-100'>
           <h1>HINTS:-</h1>
-          <div className=' flex space-x-3'>
-            <p>color1</p>
-            <div className=' w-5 h-5 bg-[#62374e] rounded-lg'></div>
-            <p>color2</p>
-            <div className=' w-5 h-5 bg-[#fdc57b] rounded-lg'></div>
-          </div>
+          <p>justify-content</p>
+          <p>flex-start: items will align to the left side of the container</p>
+          <p>flex-end: items will align to the right side of the container</p>
+          <p>center: items align at the center of the container.</p>
+          <p>space-between: Items display with equal spacing between them.</p>
+          <p>space-around: Items display with equal spacing around them.</p>
+          <p>For example, justify-content: flex-end; will move the frog to the right. </p>
         </div>
+      </div>
       </div>
     </>
   );

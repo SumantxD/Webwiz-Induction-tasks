@@ -32,7 +32,9 @@ const Navbar = () => {
         <Link to={'/task4'}>
             <button className={(curr !== 8)?'text-gray-700 bg-slate-300 p-3 rounded-lg font-medium':'text-green-500 bg-slate-300 p-3 rounded-lg font-medium'} onClick={() => setCurr(8)}>Task4</button>
         </Link>
-        <button className={(curr !== 9)?'text-gray-700 bg-slate-300 p-3 rounded-lg font-medium':'text-green-500 bg-slate-300 p-3 rounded-lg font-medium'} onClick={() => setCurr(9)}>Task5</button>
+        <Link to={'/task5'}>
+            <button className={(curr !== 9)?'text-gray-700 bg-slate-300 p-3 rounded-lg font-medium':'text-green-500 bg-slate-300 p-3 rounded-lg font-medium'} onClick={() => setCurr(9)}>Task5</button>
+        </Link>
     </div>
     </>
   )
