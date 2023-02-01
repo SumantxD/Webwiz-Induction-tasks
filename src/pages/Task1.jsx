@@ -57,7 +57,7 @@ function Task1() {
 
     
         <Navbar/>
-      <div id='container' className=' flex flex-col mt-5'>
+      <div id='container' className=' flex flex-col mt-5 max-w-[90vw]'>
         <div id='left-section' className='flex bg-green-300 justify-between'>
           <div className='flex flex-col'>
             <h1 className=' bg-red-400'>HTML</h1>
@@ -66,7 +66,7 @@ function Task1() {
 <!-- color1 #5d3a3a -->
 <!-- color2 #b5e0ba -->"
               height="200px"
-              width="525px"
+              width= "500px"
               theme={okaidia}
               extensions= {[html({autoCloseTags:true})]}
               onChange={onChangehtmlC}
@@ -82,7 +82,7 @@ function Task1() {
   background: #dd6b4d;
 }"
               height="200px"
-              width="525px"
+              width="500px"
               extensions= {[css()]}
               theme={okaidia}
               onChange={onChangecssC}
@@ -94,7 +94,7 @@ function Task1() {
             <CodeMirror
               value="console.log('hello world!');"
               height="200px"
-              width="525px"
+              width="500px"
               theme={okaidia}
               extensions={[javascript({ jsx: true })]}
               onChange={onChangejsC}
